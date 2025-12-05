@@ -1,8 +1,10 @@
 version: 0.0
 os: linux
+
 files:
   - source: /
     destination: /appdir
+    overwrite: yes
 
 hooks:
   ApplicationStop:
@@ -10,7 +12,7 @@ hooks:
       timeout: 60
       runas: ubuntu
 
-  AfterInstall:
+  ApplicationStart:
     - location: scripts/start.sh
       timeout: 120
       runas: ubuntu

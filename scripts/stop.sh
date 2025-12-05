@@ -1,4 +1,6 @@
 #!/bin/bash
-nomeApp="meu-app"
 
-sudo supervisorctl stop $nomeApp
+# Mata o serve se estiver rodando
+pkill -f "serve" || true
+
+echo "Aplicação parada."
