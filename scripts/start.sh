@@ -1,7 +1,6 @@
-#!/usr/bin/env bash
-set -e
-export PATH="/usr/local/bin:$PATH"
+#!/bin/bash
 
+export PATH="/usr/local/bin:$PATH"
 
 # Matar instâncias anteriores do serve
 pkill -f "serve" || true
